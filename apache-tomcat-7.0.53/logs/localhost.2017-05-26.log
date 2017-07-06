@@ -1,0 +1,572 @@
+五月 26, 2017 11:03:02 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+五月 26, 2017 11:03:02 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+五月 26, 2017 11:03:02 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@22738248')
+五月 26, 2017 11:03:46 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/mine] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 10 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+
+
+An error occurred at line: 11 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+An error occurred at line: 17 in the jsp file: /loginAction.jsp
+next cannot be resolved or is not a field
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+20:       out.println("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛岃閲嶆柊杈撳叆锛?");
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 10 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+
+
+An error occurred at line: 11 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+An error occurred at line: 17 in the jsp file: /loginAction.jsp
+next cannot be resolved or is not a field
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+20:       out.println("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛岃閲嶆柊杈撳叆锛?");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 26, 2017 11:04:56 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/mine] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 10 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+
+
+An error occurred at line: 11 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+An error occurred at line: 17 in the jsp file: /loginAction.jsp
+next cannot be resolved or is not a field
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+20:       out.println("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛岃閲嶆柊杈撳叆锛?");
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 10 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+
+
+An error occurred at line: 11 in the jsp file: /loginAction.jsp
+Type mismatch: cannot convert from Object to String
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = request.getAttribute("u");
+11:     String pass = request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+An error occurred at line: 17 in the jsp file: /loginAction.jsp
+next cannot be resolved or is not a field
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+20:       out.println("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛岃閲嶆柊杈撳叆锛?");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 26, 2017 11:05:24 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/mine] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = (String)request.getAttribute("u");
+11:     String pass = (String)request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+An error occurred at line: 17 in the jsp file: /loginAction.jsp
+next cannot be resolved or is not a field
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+20:       out.println("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛岃閲嶆柊杈撳叆锛?");
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = (String)request.getAttribute("u");
+11:     String pass = (String)request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+An error occurred at line: 17 in the jsp file: /loginAction.jsp
+next cannot be resolved or is not a field
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+20:       out.println("鐢ㄦ埛鍚嶆垨瀵嗙爜閿欒锛岃閲嶆柊杈撳叆锛?");
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 26, 2017 11:05:58 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/mine] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = (String)request.getAttribute("u");
+11:     String pass = (String)request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next()){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = (String)request.getAttribute("u");
+11:     String pass = (String)request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+An error occurred at line: 16 in the jsp file: /loginAction.jsp
+The method executeQuery(String) in the type Statement is not applicable for the arguments (PreparedStatement)
+13:     PreparedStatement ps = conn.prepareStatement(sql);
+14:     ps.setObject(1, username);
+15:     ps.setObject(2, pass);
+16:     ResultSet rs = ps.executeQuery(ps);
+17:     if(rs.next()){
+18:       response.sendRedirect("main.jsp");              //閲嶅畾鍚戝埌涓荤晫闈?
+19:     }else{
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 26, 2017 11:06:24 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/mine] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = (String)request.getAttribute("u");
+11:     String pass = (String)request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 9 in the jsp file: /loginAction.jsp
+The method getConnnection(String, String, String) is undefined for the type DriverManager
+6:     String url = "jdbc:mysql://localhost:3306/s59";
+7:     String user = "root";
+8:     String password = "1018222wxw";
+9:     Connection conn = DriverManager.getConnnection(url,user,password);
+10:     String username = (String)request.getAttribute("u");
+11:     String pass = (String)request.getAttribute("p");
+12:     String sql = "SELECT username, password from userinfo where username = ? and password = ?";
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 26, 2017 11:09:01 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+五月 26, 2017 11:09:01 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+五月 26, 2017 11:09:03 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+五月 26, 2017 11:09:03 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+五月 26, 2017 11:09:03 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@22738248')
+五月 26, 2017 11:12:12 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+五月 26, 2017 11:12:12 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+五月 26, 2017 11:12:18 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+五月 26, 2017 11:12:18 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+五月 26, 2017 11:12:18 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@2c99994a')
+五月 26, 2017 11:21:59 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+五月 26, 2017 11:21:59 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()

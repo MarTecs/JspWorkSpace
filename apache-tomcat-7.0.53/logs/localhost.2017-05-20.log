@@ -1,0 +1,1639 @@
+五月 20, 2017 11:19:30 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+五月 20, 2017 11:19:30 下午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+五月 20, 2017 11:19:30 下午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@2c99994a')
+五月 20, 2017 11:20:04 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 8 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+5: <%
+6:   try{
+7:       Class.forName("com.mysql.jdbc.Driver");
+8:       String url = "jdbc:mysql://localhost:3306/s59"
+9:       String user = "root";
+10:       String password = "1018222wxw";
+11:       Connection conn = DriverManager.getConnection(url,  user,password);
+
+
+An error occurred at line: 15 in the jsp file: /index.jsp
+PreaparedStatement cannot be resolved to a type
+12: 
+13: 
+14:       String sql = "SELECT e.eId,e.eName,d.dName,e.eSex,e.eBorn,e.elove from dep d , emp e where e.dId = d.dId";
+15:       PreaparedStatement ps = conn.prepareStatement(sql);
+16:       ResultSet rs = ps.executeQuery();
+17:     }catch(Exception e){
+18:       e.printStackTrace();
+
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 8 in the jsp file: /index.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+5: <%
+6:   try{
+7:       Class.forName("com.mysql.jdbc.Driver");
+8:       String url = "jdbc:mysql://localhost:3306/s59"
+9:       String user = "root";
+10:       String password = "1018222wxw";
+11:       Connection conn = DriverManager.getConnection(url,  user,password);
+
+
+An error occurred at line: 15 in the jsp file: /index.jsp
+PreaparedStatement cannot be resolved to a type
+12: 
+13: 
+14:       String sql = "SELECT e.eId,e.eName,d.dName,e.eSex,e.eBorn,e.elove from dep d , emp e where e.dId = d.dId";
+15:       PreaparedStatement ps = conn.prepareStatement(sql);
+16:       ResultSet rs = ps.executeQuery();
+17:     }catch(Exception e){
+18:       e.printStackTrace();
+
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:20:52 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /index.jsp
+PreaparedStatement cannot be resolved to a type
+12: 
+13: 
+14:       String sql = "SELECT e.eId,e.eName,d.dName,e.eSex,e.eBorn,e.elove from dep d , emp e where e.dId = d.dId";
+15:       PreaparedStatement ps = conn.prepareStatement(sql);
+16:       ResultSet rs = ps.executeQuery();
+17:     }catch(Exception e){
+18:       e.printStackTrace();
+
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /index.jsp
+PreaparedStatement cannot be resolved to a type
+12: 
+13: 
+14:       String sql = "SELECT e.eId,e.eName,d.dName,e.eSex,e.eBorn,e.elove from dep d , emp e where e.dId = d.dId";
+15:       PreaparedStatement ps = conn.prepareStatement(sql);
+16:       ResultSet rs = ps.executeQuery();
+17:     }catch(Exception e){
+18:       e.printStackTrace();
+
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:21:15 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /index.jsp
+PreaparedStatement cannot be resolved to a type
+12: 
+13: 
+14:       String sql = "SELECT e.eId,e.eName,d.dName,e.eSex,e.eBorn,e.elove from dep d , emp e where e.dId = d.dId";
+15:       PreaparedStatement ps = conn.prepareStatement(sql);
+16:       ResultSet rs = ps.executeQuery();
+17:     }catch(Exception e){
+18:       e.printStackTrace();
+
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /index.jsp
+PreaparedStatement cannot be resolved to a type
+12: 
+13: 
+14:       String sql = "SELECT e.eId,e.eName,d.dName,e.eSex,e.eBorn,e.elove from dep d , emp e where e.dId = d.dId";
+15:       PreaparedStatement ps = conn.prepareStatement(sql);
+16:       ResultSet rs = ps.executeQuery();
+17:     }catch(Exception e){
+18:       e.printStackTrace();
+
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:21:50 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()) {%>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:22:24 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()){ %>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()){ %>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()){ %>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 33 in the jsp file: /index.jsp
+rs cannot be resolved
+30:     <th>员工爱好</th>
+31:   </thead>
+32:   <tbody align="center">
+33:     <% while(rs.next()){ %>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+
+
+An error occurred at line: 35 in the jsp file: /index.jsp
+rs cannot be resolved
+32:   <tbody align="center">
+33:     <% while(rs.next()){ %>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+
+
+An error occurred at line: 36 in the jsp file: /index.jsp
+rs cannot be resolved
+33:     <% while(rs.next()){ %>
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+
+
+An error occurred at line: 37 in the jsp file: /index.jsp
+rs cannot be resolved
+34:       <tr>
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+
+
+An error occurred at line: 38 in the jsp file: /index.jsp
+rs cannot be resolved
+35:         <td><%= rs.getInt(1)%></td>
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+
+
+An error occurred at line: 39 in the jsp file: /index.jsp
+rs cannot be resolved
+36:         <td><%= rs.getString(2)%></td>
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+
+
+An error occurred at line: 40 in the jsp file: /index.jsp
+rs cannot be resolved
+37:         <td><%= rs.getString(3)%></td>
+38:         <td><%= rs.getString(4)%></td>
+39:         <td><%= rs.getString(5)%></td>
+40:         <td><%= rs.getString(6)%></td>
+41:       </tr>
+42:     <% } %>
+43:   </tbody>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:44:34 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 11 in the jsp file: /delete.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+8:   String user = "root";
+9:   String pass = "1018222wxw";
+10:   Connection conn = DriverManager.getConnection(url, user, pass);
+11:   String sql = "DELETE FROM emp WHERE eId = ?"
+12:   PreparedStatement ps = conn.prepareStatement(sql);
+13:   String id = request.getParameter("eId");
+14:   ps.setObject(1, id);
+
+
+An error occurred at line: 17 in the jsp file: /delete.jsp
+The method sendredirect(String) is undefined for the type HttpServletResponse
+14:   ps.setObject(1, id);
+15:   int n = ps.executeUpdate();
+16:   if(n > 0){
+17:     response.sendredirect("index.jsp");
+18:   }else{
+19:     out.println("鍒犻櫎澶辫触");
+20:   }
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 11 in the jsp file: /delete.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+8:   String user = "root";
+9:   String pass = "1018222wxw";
+10:   Connection conn = DriverManager.getConnection(url, user, pass);
+11:   String sql = "DELETE FROM emp WHERE eId = ?"
+12:   PreparedStatement ps = conn.prepareStatement(sql);
+13:   String id = request.getParameter("eId");
+14:   ps.setObject(1, id);
+
+
+An error occurred at line: 17 in the jsp file: /delete.jsp
+The method sendredirect(String) is undefined for the type HttpServletResponse
+14:   ps.setObject(1, id);
+15:   int n = ps.executeUpdate();
+16:   if(n > 0){
+17:     response.sendredirect("index.jsp");
+18:   }else{
+19:     out.println("鍒犻櫎澶辫触");
+20:   }
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:44:49 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 17 in the jsp file: /delete.jsp
+The method sendredirect(String) is undefined for the type HttpServletResponse
+14:   ps.setObject(1, id);
+15:   int n = ps.executeUpdate();
+16:   if(n > 0){
+17:     response.sendredirect("index.jsp");
+18:   }else{
+19:     out.println("鍒犻櫎澶辫触");
+20:   }
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 17 in the jsp file: /delete.jsp
+The method sendredirect(String) is undefined for the type HttpServletResponse
+14:   ps.setObject(1, id);
+15:   int n = ps.executeUpdate();
+16:   if(n > 0){
+17:     response.sendredirect("index.jsp");
+18:   }else{
+19:     out.println("鍒犻櫎澶辫触");
+20:   }
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:45:06 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [An exception occurred processing JSP page /delete.jsp at line 10
+
+7:   String url = "jdbc:mysql://3306/s59";
+8:   String user = "root";
+9:   String pass = "1018222wxw";
+10:   Connection conn = DriverManager.getConnection(url, user, pass);
+11:   String sql = "DELETE FROM emp WHERE eId = ?";
+12:   PreparedStatement ps = conn.prepareStatement(sql);
+13:   String id = request.getParameter("eId");
+
+
+Stacktrace:] with root cause
+java.net.SocketException: Network is unreachable: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:79)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at java.net.Socket.connect(Socket.java:538)
+	at java.net.Socket.<init>(Socket.java:434)
+	at java.net.Socket.<init>(Socket.java:244)
+	at com.mysql.jdbc.StandardSocketFactory.connect(StandardSocketFactory.java:259)
+	at com.mysql.jdbc.MysqlIO.<init>(MysqlIO.java:300)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2408)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2445)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:813)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.GeneratedConstructorAccessor12.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:334)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at org.apache.jsp.delete_jsp._jspService(delete_jsp.java:72)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:33 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unsupported encoding: utd-8] with root cause
+org.apache.jasper.JasperException: Unsupported encoding: utd-8
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:56)
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:445)
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:117)
+	at org.apache.jasper.compiler.JspUtil.getReader(JspUtil.java:955)
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:237)
+	at org.apache.jasper.compiler.ParserController.parseDirectives(ParserController.java:119)
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:193)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:373)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:42 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 33 in the jsp file: /register.jsp
+The method whlie(boolean) is undefined for the type register_jsp
+30:   <br>
+31:   鎵?鍦ㄩ儴闂細
+32:   <select  name="dep">
+33:     <% whlie(rs.next()) {%>
+34:       <option value="<%=rs.getInt(1)%>">
+35:         <%=rs.getString(2)%>
+36:       </option>
+
+
+An error occurred at line: 33 in the jsp file: /register.jsp
+Syntax error, insert ";" to complete Statement
+30:   <br>
+31:   鎵?鍦ㄩ儴闂細
+32:   <select  name="dep">
+33:     <% whlie(rs.next()) {%>
+34:       <option value="<%=rs.getInt(1)%>">
+35:         <%=rs.getString(2)%>
+36:       </option>
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 33 in the jsp file: /register.jsp
+The method whlie(boolean) is undefined for the type register_jsp
+30:   <br>
+31:   鎵?鍦ㄩ儴闂細
+32:   <select  name="dep">
+33:     <% whlie(rs.next()) {%>
+34:       <option value="<%=rs.getInt(1)%>">
+35:         <%=rs.getString(2)%>
+36:       </option>
+
+
+An error occurred at line: 33 in the jsp file: /register.jsp
+Syntax error, insert ";" to complete Statement
+30:   <br>
+31:   鎵?鍦ㄩ儴闂細
+32:   <select  name="dep">
+33:     <% whlie(rs.next()) {%>
+34:       <option value="<%=rs.getInt(1)%>">
+35:         <%=rs.getString(2)%>
+36:       </option>
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:43 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:43 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:43 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:43 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:43 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:44 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:44 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+五月 20, 2017 11:59:44 下午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/s5903] threw exception [java.lang.ClassNotFoundException: org.apache.jsp.register_jsp] with root cause
+java.lang.ClassNotFoundException: org.apache.jsp.register_jsp
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:132)
+	at org.apache.jasper.servlet.JasperLoader.loadClass(JasperLoader.java:63)
+	at org.apache.catalina.core.DefaultInstanceManager.newInstance(DefaultInstanceManager.java:145)
+	at org.apache.jasper.servlet.JspServletWrapper.getServlet(JspServletWrapper.java:172)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:369)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>欢迎使用正方教务管理系统！请登录</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+  </head>
+  <style media="screen">
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      overflow: hidden;
+      background-image: url(images/login_bg.jpg);
+      background-repeat: repeat-x;
+    }
+
+
+    #container {
+      margin-top: 22px;
+      width: 891px;
+      height: 453px;
+      position: absolute;
+      left: 50%;
+      margin-left: -445.5px;
+    }
+
+    #header {
+      height: 90px;
+    }
+
+
+
+    .logo {
+      margin-top: 20px;
+    }
+
+    .jw {
+      margin-left: -4px;
+    }
+
+    #copyright {
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+
+    #main {
+      height: 363px;
+      background-image: url(images/login_left.jpg);
+      background-repeat: no-repeat;
+    }
+
+    #left {
+      display: inline-block;
+      width: 422px;
+      height: 265px;
+    }
+
+    #left img {
+      position: relative;
+      left: 2px;
+      top: 29px;
+    }
+
+    #right {
+      /*display: inline-block;*/              /*为什么这行注释之后就没问题了，加上之后就有问题了*/
+      width: 462px;
+      height: 340px;
+      background-image: url(images/login_right.jpg);
+    }
+
+  </style>
+  <body>
+    <div id="container">
+      <div id="header">
+        <img class="logo" src="images\logo_school.png" alt="请稍后再试" >
+        <img class="logo jw" src="images\logo_jw.png" alt="请稍后再试" >
+        <img id="copyright" src="images\login_zf.jpg" alt="请稍后再试" >
+      </div>
+      <div id="main">
+        <div id="left">
+          <img src="images/login_pic.png" alt="请稍后再试">
+        </div>
+        <div id="right">
+          <form action="">
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

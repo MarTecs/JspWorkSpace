@@ -21,7 +21,7 @@
       <br />
       <%
         //输出info()方法的返回值
-        out.println(info());
+        out.println(info());          //这里并不是直接使用方法，这只是一种假象，其实是在Jsp编译中生成的Servlet的实例方法
       %>
   </body>
 </html>

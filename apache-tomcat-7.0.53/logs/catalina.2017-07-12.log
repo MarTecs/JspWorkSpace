@@ -1,0 +1,82 @@
+七月 12, 2017 10:00:19 上午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\SiVan\AppData\Local\Programs\Python\Python36-32;C:\Users\SiVan\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\MySQL\bin;D:\Program Files\Git\Git\cmd;D:\Program Files\node\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;E:\SQL2012\实例根目录\110\DTS\Binn\;E:\SQL2012\实例根目录X86\110\Tools\Binn\;E:\SQL2012\实例根目录\110\Tools\Binn\;E:\SQL2012\实例根目录X86\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;E:\SQL2012\实例根目录X86\110\DTS\Binn\;E:\Anaconda;E:\Anaconda\Scripts;E:\Anaconda\Library\bin;C:\Users\SiVan\AppData\Roaming\npm;C:\Users\SiVan\AppData\Local\atom\bin;.
+七月 12, 2017 10:00:20 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:00:20 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 309 ms
+七月 12, 2017 10:00:20 上午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+七月 12, 2017 10:00:20 上午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.53
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\docs
+七月 12, 2017 10:00:20 上午 org.apache.catalina.util.SessionIdGenerator createSecureRandom
+信息: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [187] milliseconds.
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\examples
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\host-manager
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\hut
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\manager
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\ROOT
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\webDemo
+七月 12, 2017 10:00:20 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:00:20 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:00:20 上午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 953 ms
+七月 12, 2017 10:01:04 上午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:01:04 上午 org.apache.coyote.AbstractProtocol pause
+信息: Pausing ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:01:04 上午 org.apache.catalina.core.StandardService stopInternal
+信息: Stopping service Catalina
+七月 12, 2017 10:01:04 上午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:01:04 上午 org.apache.coyote.AbstractProtocol stop
+信息: Stopping ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:01:04 上午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:01:04 上午 org.apache.coyote.AbstractProtocol destroy
+信息: Destroying ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:01:11 上午 org.apache.catalina.core.AprLifecycleListener init
+信息: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.8.0_101\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Users\SiVan\AppData\Local\Programs\Python\Python36-32;C:\Users\SiVan\AppData\Local\Programs\Python\Python36-32\Scripts\;C:\Program Files\Java\jdk1.8.0_101\bin;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;E:\MySQL\bin;D:\Program Files\Git\Git\cmd;D:\Program Files\node\;C:\Program Files\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\binn\;C:\Program Files (x86)\Microsoft SQL Server\90\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\90\Tools\Binn\VSShell\Common7\IDE\;C:\Program Files (x86)\Microsoft Visual Studio 8\Common7\IDE\PrivateAssemblies\;E:\SQL2012\实例根目录\110\DTS\Binn\;E:\SQL2012\实例根目录X86\110\Tools\Binn\;E:\SQL2012\实例根目录\110\Tools\Binn\;E:\SQL2012\实例根目录X86\110\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\;E:\SQL2012\实例根目录X86\110\DTS\Binn\;E:\Anaconda;E:\Anaconda\Scripts;E:\Anaconda\Library\bin;C:\Users\SiVan\AppData\Roaming\npm;C:\Users\SiVan\AppData\Local\atom\bin;.
+七月 12, 2017 10:01:12 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:01:12 上午 org.apache.coyote.AbstractProtocol init
+信息: Initializing ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.Catalina load
+信息: Initialization processed in 396 ms
+七月 12, 2017 10:01:12 上午 org.apache.catalina.core.StandardService startInternal
+信息: Starting service Catalina
+七月 12, 2017 10:01:12 上午 org.apache.catalina.core.StandardEngine startInternal
+信息: Starting Servlet Engine: Apache Tomcat/7.0.53
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\docs
+七月 12, 2017 10:01:12 上午 org.apache.catalina.util.SessionIdGenerator createSecureRandom
+信息: Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [192] milliseconds.
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\examples
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\host-manager
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\hut
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\manager
+七月 12, 2017 10:01:12 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\ROOT
+七月 12, 2017 10:01:13 上午 org.apache.catalina.startup.HostConfig deployDirectory
+信息: Deploying web application directory F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\webapps\webDemo
+七月 12, 2017 10:01:13 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["http-bio-8080"]
+七月 12, 2017 10:01:13 上午 org.apache.coyote.AbstractProtocol start
+信息: Starting ProtocolHandler ["ajp-bio-8009"]
+七月 12, 2017 10:01:13 上午 org.apache.catalina.startup.Catalina start
+信息: Server startup in 1051 ms

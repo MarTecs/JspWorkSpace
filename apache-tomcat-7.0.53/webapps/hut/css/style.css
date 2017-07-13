@@ -146,6 +146,6 @@ p a {
   color: #60819D;
 }
 p a:hover {
-  /*如何实现图标变色*/
   color: #205AA7;
+  background-image: url(../images/logo_copyhov.gif);
 }

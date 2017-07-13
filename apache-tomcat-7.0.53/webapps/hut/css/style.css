@@ -5,7 +5,7 @@
 
 body {
   overflow: hidden;
-  background-image: url(images/login_bg.jpg);
+  background-image: url(../images/login_bg.jpg);
   background-repeat: repeat-x;
 }
 
@@ -41,7 +41,7 @@ body {
 
 #main {
   height: 363px;
-  background-image: url(images/login_left.jpg);
+  background-image: url(../images/login_left.jpg);
   background-repeat: no-repeat;
 }
 
@@ -61,7 +61,7 @@ body {
   display: inline-block;
   width: 462px;
   height: 340px;
-  background-image: url(images/login_right.jpg);
+  background-image: url(../images/login_right.jpg);
 }
 
 #right form {
@@ -78,7 +78,7 @@ body {
   display: inline-block;
   width: 62px;
   height: 15px;
-  background-image: url(images/login_ico2.gif);
+  background-image: url(../images/login_ico2.gif);
   background-repeat: no-repeat;
   padding-left: 17px;
 }
@@ -130,7 +130,7 @@ body {
 #footer p {
   height: 23px ;
   line-height: 23px;
-  width: 451px;
+  width: 453px;
   color: #60819D;
   font-size: 12px;
   font-family: Verdana, Tahoma, Arial, Helvetica, sans-serif;
@@ -139,7 +139,7 @@ body {
 
 p a {
   display: inline-block;
-  background-image: url(images/logo_copy.gif);
+  background-image: url(../images/logo_copy.gif);
   background-repeat: no-repeat;
   padding-left: 25px;
   text-decoration:  none;

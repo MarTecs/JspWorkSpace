@@ -95,19 +95,34 @@ body {
   background-position: 0px -90px;
 }
 
+
+
 .data-line {
   display: block;
-  margin-top: 12px;
+  margin-top: 9px;
 }
 
 .data-text {
-  width: 164px;              /*为什么这里不起作用*/
+  width: 164px;
   margin-left: -13px;
+  height: 18px;
+}
+
+
+#icode {
+  position:absolute;
+  top: 250px;
+  right: 165px;
 }
 
 .data-jobs {
   margin-top: 10px;
+}
 
+.data-jobs *{
+  height: 20px;
+  vertical-align: middle;
+  line-height: 20px;
 }
 
 .data-td {

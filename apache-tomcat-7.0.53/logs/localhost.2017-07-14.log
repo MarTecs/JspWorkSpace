@@ -1,0 +1,839 @@
+七月 14, 2017 9:49:04 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+七月 14, 2017 9:49:04 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+七月 14, 2017 9:49:04 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@22738248')
+七月 14, 2017 10:35:36 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+七月 14, 2017 10:35:36 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+七月 14, 2017 10:35:36 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@22738248')
+七月 14, 2017 10:36:00 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [/doLogIn.jsp (line: 2, column: 4) Invalid directive] with root cause
+org.apache.jasper.JasperException: /doLogIn.jsp (line: 2, column: 4) Invalid directive
+	at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:42)
+	at org.apache.jasper.compiler.ErrorDispatcher.dispatch(ErrorDispatcher.java:443)
+	at org.apache.jasper.compiler.ErrorDispatcher.jspError(ErrorDispatcher.java:89)
+	at org.apache.jasper.compiler.Parser.parseDirective(Parser.java:498)
+	at org.apache.jasper.compiler.Parser.parseFileDirectives(Parser.java:1779)
+	at org.apache.jasper.compiler.Parser.parse(Parser.java:135)
+	at org.apache.jasper.compiler.ParserController.doParse(ParserController.java:242)
+	at org.apache.jasper.compiler.ParserController.parseDirectives(ParserController.java:119)
+	at org.apache.jasper.compiler.Compiler.generateJava(Compiler.java:193)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:373)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:38:05 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /doLogIn.jsp
+Syntax error on token "(", { expected
+9: 
+10:     Class.forName("com.mysql.jdbc.Driver");
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ":: IdentifierOrNew" to complete ReferenceExpression
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error on tokens, delete these tokens
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 19 in the jsp file: /doLogIn.jsp
+Syntax error on token ")", delete this token
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+18:       ps.setObject(2, password);
+19:       ps.setObject(3, identity);
+20:       ps.setObject(4, validate);
+21:     ){
+22: 
+
+
+An error occurred at line: [102] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [102] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "Finally" to complete TryStatement
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /doLogIn.jsp
+Syntax error on token "(", { expected
+9: 
+10:     Class.forName("com.mysql.jdbc.Driver");
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ":: IdentifierOrNew" to complete ReferenceExpression
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error on tokens, delete these tokens
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 19 in the jsp file: /doLogIn.jsp
+Syntax error on token ")", delete this token
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+18:       ps.setObject(2, password);
+19:       ps.setObject(3, identity);
+20:       ps.setObject(4, validate);
+21:     ){
+22: 
+
+
+An error occurred at line: [102] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [102] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "Finally" to complete TryStatement
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:38:39 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /doLogIn.jsp
+Syntax error on token "(", { expected
+9: 
+10:     Class.forName("com.mysql.jdbc.Driver");
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ":: IdentifierOrNew" to complete ReferenceExpression
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error on tokens, delete these tokens
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 19 in the jsp file: /doLogIn.jsp
+Syntax error on token ")", delete this token
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+18:       ps.setObject(2, password);
+19:       ps.setObject(3, identity);
+20:       ps.setObject(4, validate);
+21:     ){
+22: 
+
+
+An error occurred at line: [104] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [104] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "Finally" to complete TryStatement
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 12 in the jsp file: /doLogIn.jsp
+Syntax error on token "(", { expected
+9: 
+10:     Class.forName("com.mysql.jdbc.Driver");
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ":: IdentifierOrNew" to complete ReferenceExpression
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error, insert ";" to complete LocalVariableDeclarationStatement
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+Syntax error on tokens, delete these tokens
+11:     Connection conn = null;
+12:     try(
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+An error occurred at line: 19 in the jsp file: /doLogIn.jsp
+Syntax error on token ")", delete this token
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+18:       ps.setObject(2, password);
+19:       ps.setObject(3, identity);
+20:       ps.setObject(4, validate);
+21:     ){
+22: 
+
+
+An error occurred at line: [104] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "}" to complete Block
+
+An error occurred at line: [104] in the generated java file: [F:\Github仓库\JspWorkSpace\apache-tomcat-7.0.53\work\Catalina\localhost\hut\org\apache\jsp\doLogIn_jsp.java]
+Syntax error, insert "Finally" to complete TryStatement
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:39:28 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try{
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 14 in the jsp file: /doLogIn.jsp
+String literal is not properly closed by a double-quote
+11:     Connection conn = null;
+12:     try{
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ?
+15:       and identity = ?";
+16:       PreparedStateent ps = conn.prepareStatement(sql);
+17:       ps.setObject(1, username);
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:39:44 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /doLogIn.jsp
+PreparedStateent cannot be resolved to a type
+12:     try{
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ? and identity = ?";
+15:       PreparedStateent ps = conn.prepareStatement(sql);
+16:       ps.setObject(1, username);
+17:       ps.setObject(2, password);
+18:       ps.setObject(3, identity);
+
+
+An error occurred at line: 23 in the jsp file: /doLogIn.jsp
+The method sendDirect(String) is undefined for the type HttpServletResponse
+20: 
+21:       ResultSet rs = ps.executeQuery();
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+
+
+An error occurred at line: 25 in the jsp file: /doLogIn.jsp
+window cannot be resolved
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+27:     }catch(Exception e){
+28: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 15 in the jsp file: /doLogIn.jsp
+PreparedStateent cannot be resolved to a type
+12:     try{
+13:       conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/","root","password");
+14:       String sql = "select username,password from user where username = ? and password = ? and identity = ?";
+15:       PreparedStateent ps = conn.prepareStatement(sql);
+16:       ps.setObject(1, username);
+17:       ps.setObject(2, password);
+18:       ps.setObject(3, identity);
+
+
+An error occurred at line: 23 in the jsp file: /doLogIn.jsp
+The method sendDirect(String) is undefined for the type HttpServletResponse
+20: 
+21:       ResultSet rs = ps.executeQuery();
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+
+
+An error occurred at line: 25 in the jsp file: /doLogIn.jsp
+window cannot be resolved
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+27:     }catch(Exception e){
+28: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:39:56 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 23 in the jsp file: /doLogIn.jsp
+The method sendDirect(String) is undefined for the type HttpServletResponse
+20: 
+21:       ResultSet rs = ps.executeQuery();
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+
+
+An error occurred at line: 25 in the jsp file: /doLogIn.jsp
+window cannot be resolved
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+27:     }catch(Exception e){
+28: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 23 in the jsp file: /doLogIn.jsp
+The method sendDirect(String) is undefined for the type HttpServletResponse
+20: 
+21:       ResultSet rs = ps.executeQuery();
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+
+
+An error occurred at line: 25 in the jsp file: /doLogIn.jsp
+window cannot be resolved
+22:       if(rs.next()){
+23:         response.sendDirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+27:     }catch(Exception e){
+28: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:315)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:40:40 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [Unable to compile class for JSP: 
+
+An error occurred at line: 25 in the jsp file: /doLogIn.jsp
+window cannot be resolved
+22:       if(rs.next()){
+23:         response.sendRedirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+27:     }catch(Exception e){
+28: 
+
+
+Stacktrace:] with root cause
+org.apache.jasper.JasperException: Unable to compile class for JSP: 
+
+An error occurred at line: 25 in the jsp file: /doLogIn.jsp
+window cannot be resolved
+22:       if(rs.next()){
+23:         response.sendRedirect("main.jsp");
+24:       }else{
+25:         window.alert("璐﹀彿鎴栧瘑鐮侀敊璇?");
+26:       }
+27:     }catch(Exception e){
+28: 
+
+
+Stacktrace:
+	at org.apache.jasper.compiler.DefaultErrorHandler.javacError(DefaultErrorHandler.java:103)
+	at org.apache.jasper.compiler.ErrorDispatcher.javacError(ErrorDispatcher.java:366)
+	at org.apache.jasper.compiler.JDTCompiler.generateClass(JDTCompiler.java:476)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:378)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:353)
+	at org.apache.jasper.compiler.Compiler.compile(Compiler.java:340)
+	at org.apache.jasper.JspCompilationContext.compile(JspCompilationContext.java:657)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:357)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:43:12 上午 org.apache.catalina.core.StandardWrapperValve invoke
+严重: Servlet.service() for servlet [jsp] in context with path [/hut] threw exception [An exception occurred processing JSP page /doLogIn.jsp at line 32
+
+29:       e.printStackTrace();
+30: 
+31:     }finally{
+32:       conn.close();
+33:     }
+34: 
+35: %>
+
+
+Stacktrace:] with root cause
+java.lang.NullPointerException
+	at org.apache.jsp.doLogIn_jsp._jspService(doLogIn_jsp.java:95)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:70)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:432)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:390)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:334)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:727)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:303)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:241)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:208)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:220)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:122)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:501)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:170)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:98)
+	at org.apache.catalina.valves.AccessLogValve.invoke(AccessLogValve.java:950)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:116)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:408)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1040)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:607)
+	at org.apache.tomcat.util.net.JIoEndpoint$SocketProcessor.run(JIoEndpoint.java:313)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+
+七月 14, 2017 10:45:03 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+七月 14, 2017 10:45:03 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+七月 14, 2017 10:45:13 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+七月 14, 2017 10:45:13 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+七月 14, 2017 10:45:13 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@22738248')
+七月 14, 2017 10:53:35 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+七月 14, 2017 10:53:35 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+七月 14, 2017 10:53:35 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@7fd9369')
+七月 14, 2017 10:54:01 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextDestroyed()
+七月 14, 2017 10:54:01 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextDestroyed()
+七月 14, 2017 10:54:06 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+七月 14, 2017 10:54:06 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+七月 14, 2017 10:54:06 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@22738248')
+七月 14, 2017 10:54:45 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: contextInitialized()
+七月 14, 2017 10:54:45 上午 org.apache.catalina.core.ApplicationContext log
+信息: SessionListener: contextInitialized()
+七月 14, 2017 10:54:45 上午 org.apache.catalina.core.ApplicationContext log
+信息: ContextListener: attributeAdded('org.apache.jasper.compiler.TldLocationsCache', 'org.apache.jasper.compiler.TldLocationsCache@6af96456')

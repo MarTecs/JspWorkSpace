@@ -1,3 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8" language="java" errorPage="error.jsp"%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,14 +20,14 @@
           <img src="images/login_pic.png" alt="请稍后再试">
         </div>
         <div id="right">
-          <form action="">
+          <form action="doLogIn.jsp" method="post">
             <table>
               <tr class="data-line">
                 <td>
                   <span id="user" class="data data-user">用户名：</span>
                 </td>
                 <td>
-                  <input type="text" class="data-text" name="data-username">
+                  <input type="text" class="data-text" name="data-username" required>
                 </td>
               </tr>
               <tr class="data-line">
@@ -33,7 +35,7 @@
                   <span id="pass" class="data data-pass">密&nbsp;&nbsp;&nbsp;码：</span>
                 </td>
                 <td>
-                  <input type="password" class="data-text" name="data-password">
+                  <input type="password" class="data-text" name="data-password" required>
                 </td>
               </tr>
               <tr class="data-line">
@@ -41,33 +43,32 @@
                   <span id="validate" class="data data-validate">验证码：</span>
                 </td>
                 <td>
-                  <input type="text" class="data-text" name="data-validate">
+                  <input type="text" class="data-text" name="data-validate" required>
                   <img id="icode" src="http://218.75.197.123:83/CheckCode.aspx?" alt="看不清换一张">
                   <a href="" style="text-decoration:none;color:blue;position:absolute;top:250px;right:90px;">
                     看不清换一张
                   </a>
                 </td>
-
               </tr>
             </table>
             <table class="data-jobs">
               <tbody>
                 <tr>
                   <td class="data-td">
-                    <input type="radio" name="jobs">
-                    <label for="">部门</label>
+                    <input type="radio" name="jobs" value="department">
+                    <label for="jobs">部门</label>
                   </td>
                   <td class="data-td">
-                    <input type="radio" name="jobs">
-                    <label for="">教师</label>
+                    <input type="radio" name="jobs" value="teacher">
+                    <label for="jobs">教师</label>
                   </td>
                   <td class="data-td">
-                    <input type="radio" name="jobs">
-                    <label for="">学生</label>
+                    <input type="radio" name="jobs" value="student">
+                    <label for="jobs">学生</label>
                   </td>
                   <td class="data-td">
-                    <input type="radio" name="jobs">
-                    <label for="">访客</label>
+                    <input type="radio" name="jobs" value="visitor">
+                    <label for="jobs">访客</label>
                   </td>
                 </tr>
                 </table>

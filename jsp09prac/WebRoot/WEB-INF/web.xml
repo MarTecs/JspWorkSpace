@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  
+  <!-- servlet注册 -->
+  <servlet>
+  	<servlet-name>UserServlet</servlet-name>
+  	<servlet-class>com.servlet.UserServlet</servlet-class>
+  </servlet>
+  
+  <!-- servlet映射 -->
+  <servlet-mapping>
+  	<servlet-name>UserServlet</servlet-name>
+  	<url-pattern>/user.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <session-config>
+  	<session-timeout>10</session-timeout>	<!-- 设置session10分钟过期 -->
+  </session-config>
+</web-app>
